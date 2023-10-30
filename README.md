@@ -84,7 +84,7 @@
 
 4. To enable auto import sort on file save in vscode
 
-    - Open `setting.json`
+    - Open `settings.json`
     - Add the following config
 ```
     'editor.codeActionsOnSave': {
