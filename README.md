@@ -33,7 +33,7 @@
 1. Install Tailwind CSS
 
 ```
-   npm install -D tailwindcss
+   npm install -D tailwindcss postcss autoprefixer
 ```
 
 2. Create configure file your template paths
@@ -45,7 +45,7 @@
 3. Add file extensions to tailwind Configure file in contens property
 
 ```
-    "./src/**/*.{html,js, jsx, ts, tsx}"
+    "./src/**/*.{html,js, jsx, ts, tsx}", "./index.html"
 ```
 
 4. Add the tailwind firectives at the top of the `index.css`
