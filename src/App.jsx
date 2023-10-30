@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>LMS</h1>
+    LMS
     </>
   )
 }
