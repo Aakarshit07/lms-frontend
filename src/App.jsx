@@ -1,19 +1,22 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
-import HomePage from './Pages/HomePage';
-import AboutUs from './Pages/AboutUs';
-import NotFound from './Pages/NotFound';
-import Signup from './Pages/Signup';
-import Login from './Pages/Login';
-import CourseList from './Pages/Course/CourseList';
-import Contact from './Pages/Contact';
-import Denied from './Pages/Denied';
-import CourseDescription from './Pages/Course/CourseDescription';
+import { Route, Routes } from 'react-router-dom';
+
 import RequireAuth from './Components/Auth/RequireAuth';
+import AboutUs from './Pages/AboutUs';
+import Contact from './Pages/Contact';
+import CourseDescription from './Pages/Course/CourseDescription';
+import CourseList from './Pages/Course/CourseList';
 import CreateCourse from './Pages/Course/CreateCourse';
-import Profile from './Pages/User/Profile';
+import Denied from './Pages/Denied';
+import HomePage from './Pages/HomePage';
+import Login from './Pages/Login';
+import NotFound from './Pages/NotFound';
+import Checkout from './Pages/Payment/Checkout';
+import CheckoutSuccess from './Pages/Payment/CheckoutSuccess';
+import Signup from './Pages/Signup';
 import EditProfile from './Pages/User/EditProfile';
+import Profile from './Pages/User/Profile';
 
 
 function App() {
@@ -38,6 +41,8 @@ function App() {
         <Route element={<RequireAuth allowedRoles={["ADMIN", "USER"]} />} >
           <Route path="/user/profile" element={<Profile />} />
           <Route path="/user/editprofile" element={<EditProfile />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout/success" element={<CheckoutSuccess />} />
         </Route>
 
 
