@@ -41,11 +41,13 @@ export const login = createAsyncThunk("/auth/login", async (data) => {
             error: "Failed to login"
         });
         // we used await for response on here so that first it will show toast then it wait and take the data from response and return it.
+        console.log((await res).data);
         return (await res).data;
     } catch(error) {
         toast.error(error?.response?.data?.message);
     }
 });
+
 // Logout
 export const logout = createAsyncThunk("/auth/logout", async () => {
     try {
@@ -74,6 +76,7 @@ export const updateProfile = createAsyncThunk("/user/update/profile", async (dat
             },
             error: "Failed to update profile"
         });
+        console.log((await res).data);
         return (await res).data;
     } catch (error) {
         toast.error(error?.response?.data?.message);
@@ -81,9 +84,10 @@ export const updateProfile = createAsyncThunk("/user/update/profile", async (dat
 });
 
 // get user data after updating prfile
-export const getUserData = createAsyncThunk("/user/detailes", async (id, data) => {
+export const getUserData = createAsyncThunk("/user/detailes", async () => {
     try {
         const res = axiosInstance.get("user/me");
+        console.log((await res).data);
         return (await res).data;
     } catch (error) {
         toast.error(error.message);

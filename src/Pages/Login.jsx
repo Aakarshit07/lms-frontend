@@ -24,7 +24,6 @@ function Login() {
         })
     }
 
-
     async function onLogin(event) {
         event.preventDefault();
 

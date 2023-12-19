@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { toast } from "react-hot-toast";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { BsPersonCircle } from 'react-icons/bs';
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { BsPersonCircle } from 'react-icons/bs';
 
 import HomeLayout from "../../Layouts/HomeLayout"
-
 import { getUserData, updateProfile } from "../../Redux/Slices/AuthSlice";
-import { AiOutlineArrowLeft } from "react-icons/ai";
 
 function EditProfile() {
     const dispatch = useDispatch();
@@ -22,6 +21,7 @@ function EditProfile() {
     function handleImageUpload(e) {
         e.preventDefault();
         const uploadedImage = e.target.files[0];
+        console.log(uploadedImage);
         if(uploadedImage) {
             const fileReader = new FileReader();
             fileReader.readAsDataURL(uploadedImage);
