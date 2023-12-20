@@ -23,9 +23,10 @@ function Displaylectures() {
 
     useEffect(() => {
         console.log(state);
-        // if(!state) navigate("/courses");
-        // dispatch(getCourseLecture(state.id))       
-    }, [])
+        if(!state) navigate("/courses");
+        dispatch(getCourseLecture(state.id))       
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     return (
         <HomeLayout>
