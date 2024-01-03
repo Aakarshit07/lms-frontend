@@ -29,9 +29,9 @@ function AdminDashboard( ) {
             {
                 label: "User Details",
                 data: [allUsersCount, subscribeCount],
-                backgroundColor: ["yellow, green"],
+                backgroundColor: ["#A7C957", "#BC4749"],
                 borderWidth: 1, 
-                borderColor: [["yellow, green"]],
+                borderColor: ["#A7C957", "#BC4749"],
             }
         ]
     };
@@ -43,7 +43,7 @@ function AdminDashboard( ) {
             {
                 label: "Sales / Month",
                 data: monthlySalesRecord,
-                backgroundColor: ["rgb(255, 99, 132)"],
+                backgroundColor: ["#b5e2fa"],
                 borderColor: ["white"],
                 borderWidth: 2, 
             }

@@ -37,24 +37,21 @@ function App() {
 
         <Route path="/course/description" element={<CourseDescription />} />
 
-
         <Route element={<RequireAuth allowedRoles={["ADMIN"]} />} >
           <Route path="/course/create" element={<CreateCourse />} />
           <Route path="/course/addlecture" element={<AddLecture />} />
-        </Route>
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        </Route>
 
         <Route element={<RequireAuth allowedRoles={["ADMIN", "USER"]} />} >
-        </Route>
           <Route path="/user/profile" element={<Profile />} />
           <Route path="/user/editprofile" element={<EditProfile />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/checkout/success" element={<CheckoutSuccess />} />
           <Route path="/checkout/fail" element={<CheckoutFailure />} />
           <Route path="/course/displaylectures" element={<Displaylectures />} />
+        </Route>
 
-
-        
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
        
